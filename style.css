@@ -1,0 +1,106 @@
+  * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .grid-container > * {
+        border: 2px dotted lightblue;
+      }
+
+      .grid-container {
+        min-height: 100vh;
+
+        display: grid;
+        grid-template:
+          "header header header header header" 50px
+          ". user-info content-feed news-sidebar ." 1fr /
+          1fr 200px 600px 200px 1fr;
+        gap: 8px;
+      }
+
+      .main-header {
+        grid-area: header;
+        display: grid;
+        grid-template:
+          ". three-column-grid-header ." 50px /
+          1fr 1000px 1fr;
+      }
+
+      .user-info {
+        grid-area: user-info;
+      }
+
+      .content-feed {
+        grid-area: content-feed;
+      }
+
+      .news-sidebar {
+        grid-area: news-sidebar;
+      }
+
+      /* Styles for first review */
+
+      .three-column-grid-header > * {
+        border: 2px dotted lightcoral;
+      }
+
+      .nav-icons {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+      }
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .search-bar {
+        width: 150px;
+        height: 40px;
+
+        background-color: #eee;
+        border: 2px solid black;
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+
+        border: 2px dotted lightgreen;
+      }
+
+      .five-column-grid-icons {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 8px;
+      }
+
+      .three-column-grid-header {
+        grid-area: three-column-grid-header;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+      }
+      .boxes {
+        width: 100px;
+        height: 100px;
+
+        border: 2px dotted pink;
+      }
+      .item {
+        width: 40px;
+        height: 40px;
+        border: 2px dotted purple;
+        list-style: none;
+      }
+      .three-row-grid {
+        display: grid;
+        grid-template-rows: minmax(40px, 100px);
+        gap: 20px;
+      }
